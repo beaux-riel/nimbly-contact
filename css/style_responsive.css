@@ -1,0 +1,186 @@
+@font-face {
+      font-family: 'Museo100';
+      src: url('Museo100-Regular-webfont.woff2') format('woff2'),
+            url('Museo100-Regular-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {
+
+      font-family: 'Museo700';
+      src: url('Museo700-Regular-webfont.woff2') format('woff2'),
+            url('Museo700-Regular-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+}
+
+
+html, body {
+      padding: 0;
+      margin: auto;
+      font-family: 'Museo100', Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+}
+
+.parent {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: stretch;
+      vertical-align: middle;
+      justify-content: space-around;
+      border: 2px solid red;
+      height: 100%;
+
+}
+
+.container-1, .container-2 {
+      height: inherit;
+      width: inherit;
+      display: block;
+      float: left;
+      margin: 0 auto;
+
+}
+
+.container-1 {
+      order: 1;
+      flex: 1;
+      padding: 10% 35%;
+      fill: #0F191E;
+      background: red;
+      border: 2px solid green;
+
+}
+
+.container-2 {
+      order: 2;
+      flex: 2;
+      padding: 10% 5%;
+      border: 2px solid blue; 
+}
+
+h1 {
+      text-align: center;
+      font-family: 'Museo700';
+      font-style: normal;
+      font-size: calc(18vw);
+      margin: 0 0 20px;
+      color: #000000;
+      opacity: 15%;
+}
+
+p {
+      margin: 0 0 5px;
+}
+
+form {
+      padding: 5px;
+      flex-direction: row;
+      width: auto;
+}
+
+input, textarea {
+      height: 4em;
+      width: 100%;
+      margin: 1%;
+      border-radius: 10px;
+      font-family: 'Museo100';
+      background: rgb(0, 0, 0, 0.15);
+}
+
+textarea {
+    width: 100%;
+    height: 100%; 
+    box-sizing: border-box;
+}
+
+input::placeholder {
+      color: #000000;
+      font-size: 1.5rem;
+      font-family: 'Museo100';
+}
+
+textarea::placeholder {
+      color: #000000;
+      font-size: 1.5rem;
+      font-family: 'Museo100';
+      height: 100%;
+}
+
+button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #0F191E; 
+      color: #ffffff;
+      border-radius: 10px;
+      font-size: 2em;
+      font-family: 'Museo100';
+}
+
+button:hover {
+      background: #c6c6c6;
+}    
+
+@media only screen and (max-width: 568px) {
+
+.parent {
+      height: 100%;
+      flex-direction: row;
+      align-items: middle;
+      justify-content: space-around;
+      align-items: stretch;
+      vertical-align: middle;
+}
+
+.container-1, .container-2 {
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+}
+
+.container-1 {
+      order: 1;
+      width: 33%;
+}
+
+.container-2 {
+      order: 2;
+      width: 77%;
+}
+
+form {
+      width: 100%;
+}
+
+.form-layout {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border: 2px solid yellow;
+      height: 30vh;
+/*     padding: 1.5% 0%; */
+}
+
+.info {
+      margin: 0% 2%;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      border: 2px solid purple;
+      margin: 0 1.5% 0 0;
+}
+
+.message {
+      flex: 1;
+      width: 100%;
+      height: 100%; 
+      border: 2px solid pink;
+}
+
+}
